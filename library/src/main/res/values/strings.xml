@@ -1,0 +1,4 @@
+<resources>
+    <string name="picture_selecter_photo">Photograph</string>
+    <string name="picture_selecter_album">Selection from local album</string>
+</resources>

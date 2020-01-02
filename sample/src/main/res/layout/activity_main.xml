@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@android:color/holo_orange_light">
+
+    <include layout="@layout/libroot_toolbar"/>
+
+    <GridView
+        android:id="@+id/mGridView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:horizontalSpacing="2dp"
+        android:verticalSpacing="2dp"
+        android:columnWidth="80dp"
+        android:numColumns="-1"
+        android:stretchMode="none"/>
+
+</LinearLayout>

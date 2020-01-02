@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="picture_selecter_photo">拍照</string>
+    <string name="picture_selecter_album">从本地相册选择</string>
+</resources>

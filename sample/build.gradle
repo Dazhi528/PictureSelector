@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion Integer.parseInt(SDK_VERSION_CUR)
+    defaultConfig {
+        applicationId "com.dazhi.sample"
+        minSdkVersion Integer.parseInt(SDK_VERSION_MIN)
+        targetSdkVersion Integer.parseInt(SDK_VERSION_CUR)
+        versionCode Integer.parseInt(VERSION_CODE)
+        versionName VERSION_NAME
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //
+    implementation project(':library')
+    implementation 'com.github.Dazhi528:MvvmAndroidLib:3.0.6'
+}

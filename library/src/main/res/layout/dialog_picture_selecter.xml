@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <RelativeLayout
+        android:id="@+id/photo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/selct_pictureselecter_dialog"
+        android:clickable="true"
+        tools:ignore="KeyboardInaccessibleWidget">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:gravity="center"
+            android:text="@string/picture_selecter_photo"
+            android:textColor="@color/picture_selecter_text"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/photo_layout"
+        android:background="@color/picture_selecter_line" />
+
+    <RelativeLayout
+        android:id="@+id/choose_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/line"
+        android:background="@drawable/selct_pictureselecter_dialog"
+        android:clickable="true"
+        tools:ignore="KeyboardInaccessibleWidget">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:gravity="center"
+            android:text="@string/picture_selecter_album"
+            android:textColor="@color/picture_selecter_text"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

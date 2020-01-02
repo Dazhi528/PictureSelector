@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="picture_selecter_line">#cdcdcd</color>
+    <color name="picture_selecter_text">#5b5a5a</color>
+</resources>
