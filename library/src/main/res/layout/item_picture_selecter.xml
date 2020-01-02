@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/ivPictureSelecterShow"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/picture_selecter_itemsize"
+        android:layout_height="@dimen/picture_selecter_itemsize"
         tools:src="@drawable/ico_picture_default"
         tools:ignore="ContentDescription" />
 
@@ -17,13 +17,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/ivPictureSelecterShow"
-        android:paddingLeft="8dp"
-        android:paddingStart="8dp"
+        android:paddingLeft="@dimen/ps_delete_padding"
+        android:paddingStart="@dimen/ps_delete_padding"
         android:paddingRight="0dp"
         android:paddingEnd="0dp"
+        android:paddingBottom="@dimen/ps_delete_padding"
         android:layout_alignRight="@id/ivPictureSelecterShow"
         android:layout_alignEnd="@id/ivPictureSelecterShow"
-        android:paddingBottom="8dp"
         android:scaleType="centerInside"
         android:src="@drawable/ico_picture_delete"
         tools:ignore="ContentDescription" />

@@ -1,5 +1,6 @@
 package com.dazhi.pictureselecter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.text.TextUtils;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.entity.LocalMedia;
 import java.util.List;
 
@@ -25,17 +27,22 @@ import java.util.List;
  */
 @SuppressWarnings("unused")
 public class PictureSelecterAdapter extends BaseAdapter {
+    private Activity activity;
     private List<LocalMedia> lsBn; //引入数据集合
     private int maxCount; //选择图片最大数
 
 
-    public PictureSelecterAdapter(List<LocalMedia> lsBn, int maxCount) {
+    public PictureSelecterAdapter(Activity activity, List<LocalMedia> lsBn, int maxCount) {
+        if(activity==null) {
+            throw new NullPointerException("activity can not be null");
+        }
         if(lsBn==null) {
             throw new NullPointerException("lsBn can not be null");
         }
         if(maxCount<=0) {
             throw new UnsupportedOperationException("maxCount must be greater than 0");
         }
+        this.activity = activity;
         this.lsBn = lsBn;
         this.maxCount = maxCount;
     }
@@ -87,6 +94,18 @@ public class PictureSelecterAdapter extends BaseAdapter {
     }
 
     private void onBindView(final ViewHolder viewHolder, LocalMedia localMedia) {
+        viewHolder.setOnClickListener(R.id.ivPictureSelecterShow, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(lsBn==null || lsBn.size()==0 || lsBn.size()==viewHolder.getItemPosition()){
+                    UtLibPicture.showDialog(activity, lsBn, maxCount);
+                    return;
+                }
+                PictureSelector.create(activity).externalPicturePreview(
+                        viewHolder.getItemPosition(), lsBn, 0);
+            }
+        });
+        //
         if (localMedia==null && booPictureAdd(viewHolder.getItemPosition())) {
             // 添加图片位置
             viewHolder.setVisibility(R.id.ivPictureSelecterDelete, View.INVISIBLE);

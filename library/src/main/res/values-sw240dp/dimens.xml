@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<dimen name="psdialog_radius">3.3333dp</dimen>
+	<dimen name="psdialog_height">23.3333dp</dimen>
+	<dimen name="psdialog_margin_x">13.3333dp</dimen>
+	<dimen name="ps_delete_padding">5.3333dp</dimen>
+	<dimen name="picture_selecter_itemsize">53.3333dp</dimen>
+</resources>

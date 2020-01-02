@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--照片/相册选择对话框-->
+    <dimen name="psdialog_radius">5dp</dimen>
+    <dimen name="psdialog_height">35dp</dimen>
+    <dimen name="psdialog_margin_x">20dp</dimen>
+    <!--grid item-->
+    <dimen name="ps_delete_padding">8dp</dimen>
+    <dimen name="picture_selecter_itemsize">80dp</dimen>
+</resources>

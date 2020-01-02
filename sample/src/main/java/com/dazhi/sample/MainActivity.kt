@@ -23,16 +23,8 @@ class MainActivity : RootSimpActivity() {
     }
 
     override fun initViewAndDataAndEvent() {
-        val maxCount = 6
-        adapterPicture = PictureSelecterAdapter(lsPicture, maxCount)
+        adapterPicture = PictureSelecterAdapter(this, lsPicture, 6)
         mGridView.adapter = adapterPicture
-        mGridView.setOnItemClickListener { parent, view, position, id ->
-            if(lsPicture.size==0 || lsPicture.size==position){
-                UtLibPicture.showDialog(this, lsPicture, maxCount)
-                return@setOnItemClickListener
-            }
-            PictureSelector.create(this).externalPicturePreview(position, lsPicture, 0)
-        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
